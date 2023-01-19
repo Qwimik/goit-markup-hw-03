@@ -18,14 +18,42 @@ body {
 .hidden {
   display: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  padding: 120px 0;
+}
 
 /* ============= Header ============= */
 .page-header {
   border-bottom: 1px solid var(--cornflower-color);
   padding: 24px 0;
 }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* ===== Navigation ===== */
+.page-nav {
+  display: flex;
+  column-gap: 76px;
+}
 /* ===== Logo ===== */
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -40,7 +68,10 @@ body {
 .logo-accent {
   color: var(--iris-color);
 }
-
+.nav-list {
+  display: flex;
+  column-gap: 40px;
+}
 .nav-item {
   list-style: none;
 }
@@ -57,6 +88,10 @@ body {
 }
 
 /* ===== Contacts ===== */
+.contacts-list {
+  display: flex;
+  column-gap: 40px;
+}
 .contacts-item {
   list-style: none;
   font-style: normal;
@@ -78,14 +113,22 @@ body {
 /* ===== Hero ===== */
 .hero {
   background-color: var(--navy-blue-color);
-  text-align: center;
+  padding: 188px 0;
+}
+.hero > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 48px;
 }
 .hero-title {
   color: var(--white-color);
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  margin-bottom: 48px;
+  max-width: 496px;
+  text-align: center;
 }
 .hero-btn {
   color: var(--white-color);
@@ -106,14 +149,21 @@ body {
 }
 
 /* ===== Features ===== */
+.features-list {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 24px;
+}
 .features-item {
   list-style: none;
+  width: 264px;
 }
 .features-item-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .features-item-text {
   line-height: 1.5;
@@ -122,24 +172,43 @@ body {
 }
 
 /* ===== About ===== */
+.about {
+  padding-top: 0;
+}
 .about-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.about-list {
+  display: flex;
+  column-gap: 24px;
 }
 .about-item {
   list-style: none;
 }
+.about-item-img {
+  display: block;
+}
 
 /* ===== Team ===== */
+.team {
+  background-color: var(--cloud-color);
+}
 .team-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.team-cards {
+  display: flex;
+  column-gap: 24px;
 }
 .team-card {
   list-style: none;
@@ -147,12 +216,19 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
+.team-card-content {
+  padding: 32px 16px;
+}
+.team-card-img {
+  display: block;
+}
 .team-card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .team-card-text {
   color: var(--slate-color);
@@ -168,6 +244,10 @@ body {
 .filter-list {
   padding-top: 96px;
   margin-bottom: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
 }
 .filter-item {
   list-style: none;
@@ -195,23 +275,39 @@ body {
 }
 
 /* ===== Projects ===== */
+.projects {
+  padding-top: 0;
+}
+.projects-cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
 .project-card {
   list-style: none;
-  border: 1px solid var(--cornflower-color);
+}
+.project-card-img {
+  display: block;
 }
 .project-cards-content {
   padding: 32px 0;
+  border: 1px solid var(--cornflower-color);
+  border-top: none;
 }
 .project-card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  padding-left: 16px;
 }
 .project-card-text {
   color: var(--slate-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-left: 16px;
 }
 
 /* ============= Footer ============= */
@@ -219,7 +315,7 @@ body {
   background-color: var(--navy-blue-color);
   padding: 100px 0;
 }
-.page-footer > .logo {
+.page-footer .logo {
   color: var(--cloud-color);
 }
 .footer-text {
