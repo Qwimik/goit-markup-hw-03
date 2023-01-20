@@ -141,11 +141,11 @@ img {
   border-radius: 4px;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--ocean-color);
-  cursor: pointer;
 }
 
 /* ===== Features ===== */
